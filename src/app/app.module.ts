@@ -40,8 +40,8 @@ const routes: Routes = [
     ],
   },
   { path: 'contact', component: ContactComponent },
-  { path: '**', component: PagenotfoundComponent },
   { path: 'buy-product', component: ParentComponent },
+  { path: '**', component: PagenotfoundComponent },
 ];
 @NgModule({
   imports: [BrowserModule, FormsModule, RouterModule.forRoot(routes)],
