@@ -22,6 +22,7 @@ import { CameraComponent } from './product/camera/camera.component';
 import { CycleComponent } from './product/cycle/cycle.component';
 import { NgforComponent } from './ngfor/ngfor.component';
 import { CardComponent } from './card/card.component';
+import { ParentComponent } from './parent/parent.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'login', pathMatch: 'full' },
@@ -30,8 +31,8 @@ const routes: Routes = [
   { path: 'about', component: AboutComponent },
   {
     path: 'product',
-    component: ProductComponent, children: [
-    
+    component: ProductComponent,
+    children: [
       { path: 'watch', component: WatchComponent },
       { path: 'show', component: ShowComponent },
       { path: 'camera', component: CameraComponent },
@@ -40,6 +41,7 @@ const routes: Routes = [
   },
   { path: 'contact', component: ContactComponent },
   { path: '**', component: PagenotfoundComponent },
+  { path: 'buy-product', component: ParentComponent },
 ];
 @NgModule({
   imports: [BrowserModule, FormsModule, RouterModule.forRoot(routes)],
@@ -62,7 +64,8 @@ const routes: Routes = [
     CameraComponent,
     CycleComponent,
     NgforComponent,
-    CardComponent
+    CardComponent,
+    ParentComponent,
   ],
   bootstrap: [AppComponent],
 })
