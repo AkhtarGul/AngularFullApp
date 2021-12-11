@@ -1,0 +1,66 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-8">
+      <table class="table">
+        <thead class="thead-dark">
+          <tr>
+            <th>Sr.No</th>
+            <td>Product Image</td>
+            <td>Product Name</td>
+            <td>Product ID</td>
+            <td>Product Price</td>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let pro of products; index as i">
+            <td>#{{ i }}</td>
+            <td><img src="{{ pro.proImg }}" width="70" alt="" /></td>
+            <td>{{ pro.proName }}</td>
+            <td>{{ pro.Id }}</td>
+            <td>{{ pro.proPrice }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <hr />
+  <!--NgFor for Push and splice-->
+  <br />
+  <div class="row">
+    <div class="col-md-3">
+      <input
+        type="text"
+        name=""
+        class="form-control"
+        placeholder="User Name"
+        #userName
+      />
+    </div>
+    <div class="col-md-3">
+      <button class="btn btn-success" (click)="addUser(userName)">Add</button>
+    </div>
+    <div class="col-md-3">
+      <button class="btn btn-danger" (click)="removeUser()">Remove</button>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-10">
+      <table class="table">
+        <thead class="thead-blue">
+          <tr>
+            <th>Index of Array</th>
+            <th>User Name</th>
+            <th>Remove</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let u of User; index as i">
+            <td>{{ i }}</td>
+            <td>{{ u }}</td>
+            <td><button class="btn btn-danger" (click)="onRemove(i)">Remove</button></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,18 @@
+<p>event-binding works!</p>
+<button (click)="onNotify()">Add to Cart</button>
+<!-- <p>{{Message}}</p> -->
+
+<input type="text" value="myinputtext" (click)="clickInput($event)" />
+
+<button (click)="addCart($event)" value="Laptop">Laptop</button>
+
+<button (click)="addCart($event)" value="TV">TV</button>
+
+<button (click)="addCart($event)" value="Washing Machine">
+  washing machine
+</button>
+
+<p>{{ Message }}</p>
+<br>
+<input type='text' #infoInput value='UxTrends' name='akhtar'/>
+<button (click)='getInputValue(infoInput)'>Get Info</button>
