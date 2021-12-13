@@ -3,13 +3,22 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-parent',
   templateUrl: './parent.component.html',
-  styleUrls: ['./parent.component.css']
+  styleUrls: ['./parent.component.css'],
 })
 export class ParentComponent implements OnInit {
+  constructor() {}
 
-  constructor() { }
+  ngOnInit() {}
+  proSelected: boolean = false;
+  selectProduct: string;
+  addedPorduct: any;
 
-  ngOnInit() {
+  onSelectProduct(pro: string) {
+    this.proSelected = true;
+    this.selectProduct = pro;
   }
-
+  onCart() {
+    this.addedPorduct = this.selectProduct;
+    console.log(this.addedPorduct);
+  }
 }

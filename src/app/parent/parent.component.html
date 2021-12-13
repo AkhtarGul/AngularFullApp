@@ -1,5 +1,11 @@
 <h3 class="text-center">Buy Product</h3>
+
 <hr class="mb-3" />
+<div class="alert alert-light border" *ngIf="addedPorduct">
+  <strong class="text-success">{{ addedPorduct }}</strong> &nbsp;&nbsp;&nbsp;is
+  selected and added in Cart
+  <button class="btn btn-success pull-right">Checkout</button>
+</div>
 <div class="row">
   <div class="col-md-3">
     <div class="card">
@@ -13,7 +19,9 @@
         <p class="card-text">
           Some quick example text to build on the card title
         </p>
-        <a routerLink="watch" class="btn btn-success">Select Product</a>
+        <button class="btn btn-success" (click)="onSelectProduct('Watch')">
+          Select Product
+        </button>
       </div>
     </div>
   </div>
@@ -30,7 +38,9 @@
         <p class="card-text">
           Some quick example text to build on the card title
         </p>
-        <a routerLink="camera" class="btn btn-success">Select Product</a>
+        <button class="btn btn-success" (click)="onSelectProduct('Camera')">
+          Select Product
+        </button>
       </div>
     </div>
   </div>
@@ -46,7 +56,9 @@
         <p class="card-text">
           Some quick example text to build on the card title
         </p>
-        <a routerLink="cycle" class="btn btn-success">Select Product</a>
+        <button class="btn btn-success" (click)="onSelectProduct('BySycle')">
+          Select Product
+        </button>
       </div>
     </div>
   </div>
@@ -63,7 +75,9 @@
         <p class="card-text">
           Some quick example text to build on the card title
         </p>
-        <a routerLink="show" class="btn btn-success">Select Product</a>
+        <button class="btn btn-success" (click)="onSelectProduct('Showes')">
+          Select Product
+        </button>
       </div>
     </div>
   </div>
@@ -71,7 +85,8 @@
     <router-outlet></router-outlet>
   </div>
   <div class="col-md-12 bg-success text-white text-center py-4">
-    <h2>Please Select Any Product</h2>
-    <button class="btn btn-secondary mt-3">Add Cart</button>
+    <h2 *ngIf="!proSelected">Please Select Any Product</h2>
+    <h2 *ngIf="proSelected">{{ selectProduct }} is selected</h2>
+    <button class="btn btn-secondary mt-3" (click)="onCart()">Add Cart</button>
   </div>
 </div>
