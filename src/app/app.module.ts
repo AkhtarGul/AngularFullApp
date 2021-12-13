@@ -23,6 +23,7 @@ import { CycleComponent } from './product/cycle/cycle.component';
 import { NgforComponent } from './ngfor/ngfor.component';
 import { CardComponent } from './card/card.component';
 import { ParentComponent } from './parent/parent.component';
+import { ChildComponent } from './child/child.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'login', pathMatch: 'full' },
@@ -66,6 +67,7 @@ const routes: Routes = [
     NgforComponent,
     CardComponent,
     ParentComponent,
+    ChildComponent,
   ],
   bootstrap: [AppComponent],
 })
