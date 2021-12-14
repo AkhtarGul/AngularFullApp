@@ -84,9 +84,8 @@
   <div class="col-md-4 border-top">
     <router-outlet></router-outlet>
   </div>
-  <div class="col-md-12 bg-success text-white text-center py-4">
-    <h2 *ngIf="!proSelected">Please Select Any Product</h2>
-    <h2 *ngIf="proSelected">{{ selectProduct }} is selected</h2>
-    <button class="btn btn-secondary mt-3" (click)="onCart()">Add Cart</button>
-  </div>
+  <app-child
+    [productSelected]="proSelected"
+    [selectProduct]="selectProduct",(passProduct)="onCart($event)"
+  ></app-child>
 </div>

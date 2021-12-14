@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-child',
@@ -9,5 +9,17 @@ export class ChildComponent implements OnInit {
   constructor() {}
 
   ngOnInit() {}
-  placeHolder: string = 'abc';
+  @Input() productSelected: boolean = false;
+  @Output() passProduct: EventEmitter<any>;
+  // proSelected: boolean = false;
+  @Input() selectProduct: string;
+  addedPorduct: any;
+  onCart() {
+    this.addedPorduct = this.selectProduct;
+    console.log(this.addedPorduct);
+    this.passProduct.emit(this.addedPorduct);
+  }
+  // onSelect(){
+
+  // }
 }
