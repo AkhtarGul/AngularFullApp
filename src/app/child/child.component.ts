@@ -10,7 +10,7 @@ export class ChildComponent implements OnInit {
 
   ngOnInit() {}
   @Input() productSelected: boolean = false;
-  @Output() passProduct: EventEmitter<any>;
+  @Output() passProduct = new EventEmitter<any>();
   // proSelected: boolean = false;
   @Input() selectProduct: string;
   addedPorduct: any;

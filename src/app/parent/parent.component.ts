@@ -17,8 +17,8 @@ export class ParentComponent implements OnInit {
     this.proSelected = true;
     this.selectProduct = pro;
   }
-  onCart() {
-    this.addedPorduct = this.selectProduct;
+  onCart(value) {
+    this.addedPorduct = value;
     console.log(this.addedPorduct);
   }
 }

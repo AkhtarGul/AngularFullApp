@@ -86,6 +86,7 @@
   </div>
   <app-child
     [productSelected]="proSelected"
-    [selectProduct]="selectProduct",(passProduct)="onCart($event)"
+    [selectProduct]="selectProduct"
+    (passProduct)="onCart($event)"
   ></app-child>
 </div>
