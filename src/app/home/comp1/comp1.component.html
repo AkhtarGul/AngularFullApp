@@ -1,3 +1,6 @@
-<p>
-comp1 works!
-</p>
+<div class="box">
+  User Name: <strong>{{ userName }}</strong> <br /><br />
+  <input type="text"class="form-control mb-4" placeholder="Update Name" #uname />
+  <button class="btn btn-success" (click)="getName(uname)">Update</button>
+  <br>
+</div>

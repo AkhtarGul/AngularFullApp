@@ -11,5 +11,5 @@ export class Comp3Component implements OnInit {
 
   ngOnInit() {
   }
-
+  userName: string = 'Test';
 }
