@@ -1,2 +1,10 @@
-<p>about works!</p>
+<h2>Product List</h2>
+<hr />
+<ul *ngFor="let pro of product">
+  <li>{{ pro.id }}</li>
+  <li>{{ pro.name }}</li>
+  <li>{{ pro.email }}</li>
+  <li>{{ pro.address.city }}</li>
+</ul>
+<hr />
 <app-ngfor></app-ngfor>

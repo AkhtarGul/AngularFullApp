@@ -24,6 +24,11 @@ import { NgforComponent } from './ngfor/ngfor.component';
 import { CardComponent } from './card/card.component';
 import { ParentComponent } from './parent/parent.component';
 import { ChildComponent } from './child/child.component';
+import { HttpClientModule } from '@angular/common/http';
+import { Comp1Component } from './home/comp1/comp1.component';
+import { Comp2Component } from './home/comp2/comp2.component';
+import { Comp3Component } from './home/comp3/comp3.component';
+import { Comp4Component } from './home/comp4/comp4.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'login', pathMatch: 'full' },
@@ -45,7 +50,12 @@ const routes: Routes = [
   { path: '**', component: PagenotfoundComponent },
 ];
 @NgModule({
-  imports: [BrowserModule, FormsModule, RouterModule.forRoot(routes)],
+  imports: [
+    BrowserModule,
+    FormsModule,
+    RouterModule.forRoot(routes),
+    HttpClientModule,
+  ],
   declarations: [
     AppComponent,
     HelloComponent,
@@ -68,6 +78,10 @@ const routes: Routes = [
     CardComponent,
     ParentComponent,
     ChildComponent,
+    Comp1Component,
+    Comp2Component,
+    Comp3Component,
+    Comp4Component,
   ],
   bootstrap: [AppComponent],
 })
