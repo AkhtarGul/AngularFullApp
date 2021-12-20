@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { MessageService } from '../appService/message.service';
+import { MessageService } from './message.service';
 
 @Component({
   selector: 'app-home',

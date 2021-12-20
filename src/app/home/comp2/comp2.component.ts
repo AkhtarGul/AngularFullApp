@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MessageService } from '../message.service';
 
 @Component({
   selector: 'app-comp2',
@@ -7,7 +8,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class Comp2Component implements OnInit {
 
-  constructor() { }
+  constructor(private msgSrv: MessageService) {
+    this.msgSrv.userName.subscribe((uname) => {
+      this.userName = uname;
+    });
+  }
 
   ngOnInit() {
   }
