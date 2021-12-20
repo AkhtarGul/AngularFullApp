@@ -10,5 +10,5 @@ export class MessageService {
     alert('This is Message Service');
   }
 
-  userName=new Subject<any>();
+  userName = new Subject<any>();
 }

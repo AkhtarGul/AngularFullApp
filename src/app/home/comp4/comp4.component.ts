@@ -6,7 +6,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./comp4.component.css'],
 })
 export class Comp4Component implements OnInit {
-  constructor() {}
+  constructor(private msgSrv: MessageService) {
+    this.msgSrv.userName.subscribe((uname) => {
+      this.userName = uname;
+    });
+  }
 
   ngOnInit() {}
   userName: string = 'Test';

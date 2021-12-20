@@ -7,7 +7,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class Comp3Component implements OnInit {
 
-  constructor() { }
+  constructor(private msgSrv: MessageService) {
+    this.msgSrv.userName.subscribe((uname) => {
+      this.userName = uname;
+    });
+  }
 
   ngOnInit() {
   }
