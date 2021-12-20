@@ -1,6 +1,6 @@
 <div class="box">
   User Name: <strong>{{ userName }}</strong> <br /><br />
-  <input type="text"class="form-control mb-4" placeholder="Update Name"  />
-  <button class="btn btn-success">Update</button>
+  <input type="text"class="form-control mb-4" placeholder="Update Name" #uname />
+  <button class="btn btn-success" (click)="getName(uname)">Update</button>
   <br>
 </div>

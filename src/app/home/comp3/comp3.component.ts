@@ -16,4 +16,8 @@ export class Comp3Component implements OnInit {
   ngOnInit() {
   }
   userName: string = 'Test';
+  getName(uname) {
+    confirm(uname.value);
+    this.msgSrv.userName.next(uname.value);
+  }
 }

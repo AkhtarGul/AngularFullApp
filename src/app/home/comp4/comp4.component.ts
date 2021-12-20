@@ -15,4 +15,8 @@ export class Comp4Component implements OnInit {
 
   ngOnInit() {}
   userName: string = 'Test';
+  getName(uname) {
+    confirm(uname.value);
+    this.msgSrv.userName.next(uname.value);
+  }
 }
